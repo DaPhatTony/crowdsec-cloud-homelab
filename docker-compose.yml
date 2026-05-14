@@ -11,7 +11,7 @@
           - COLLECTIONS=crowdsecurity/linux crowdsecurity/sshd crowdsecurity/docker
         volumes:
           - ./config:/etc/crowdsec
-          - ./data:/var/lib/crowdsec
+          - ./data:/var/lib/crowdsec/data
           - /var/log/auth.log:/var/log/auth.log:ro
           - /var/log/syslog:/var/log/syslog:ro
         ports:
