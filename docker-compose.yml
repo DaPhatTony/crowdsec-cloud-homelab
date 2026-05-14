@@ -8,11 +8,10 @@
         restart: always
         environment:
           - GID=1000
-          - COLLECTIONS=crowdsecurity/linux crowdsecurity/sshd crowdsecurity/docker
         volumes:
-          - ./config:/etc/crowdsec
-          - ./data:/var/lib/crowdsec/data
           - /var/log/auth.log:/var/log/auth.log:ro
           - /var/log/syslog:/var/log/syslog:ro
+          - ./config:/etc/crowdsec
+          - ./data:/var/lib/crowdsec/data
         ports:
           - "8080:8080" # Local API port
